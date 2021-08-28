@@ -443,42 +443,42 @@
 //     );
 // }
 //* ****************************************** for thapa Accordio Project *****************************************************************
-// import Search from './ThapaTechnical/project-filter/Search';
-
-// function App() {
-//     return (
-//         <>
-//             <Search />
-//         </>
-//     );
-// }
-
-//* ****************************************** for thapa FullWebsite Project *****************************************************************
-
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
-import Navbar from './ThapaTechnical/project-fullWebsite/menu/Navbar';
-import About from './ThapaTechnical/project-fullWebsite/pages/About';
-import Contact from './ThapaTechnical/project-fullWebsite/pages/Contact';
-import Footer from './ThapaTechnical/project-fullWebsite/pages/Footer';
-import Home from './ThapaTechnical/project-fullWebsite/pages/Home';
-import Service from './ThapaTechnical/project-fullWebsite/pages/Service';
-import './ThapaTechnical/project-fullWebsite/style/index.css';
+import Search from './ThapaTechnical/project-filter/Search';
 
 function App() {
     return (
-        <Router>
-            <Navbar />
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/service" component={Service} />
-                <Route exact path="/contact" component={Contact} />
-            </Switch>
-            <Footer />
-        </Router>
+        <>
+            <Search />
+        </>
     );
 }
+
+//* ****************************************** for thapa FullWebsite Project *****************************************************************
+
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
+// import Navbar from './ThapaTechnical/project-fullWebsite/menu/Navbar';
+// import About from './ThapaTechnical/project-fullWebsite/pages/About';
+// import Contact from './ThapaTechnical/project-fullWebsite/pages/Contact';
+// import Footer from './ThapaTechnical/project-fullWebsite/pages/Footer';
+// import Home from './ThapaTechnical/project-fullWebsite/pages/Home';
+// import Service from './ThapaTechnical/project-fullWebsite/pages/Service';
+// import './ThapaTechnical/project-fullWebsite/style/index.css';
+
+// function App() {
+//     return (
+//         <Router>
+//             <Navbar />
+//             <Switch>
+//                 <Route exact path="/" component={Home} />
+//                 <Route exact path="/about" component={About} />
+//                 <Route exact path="/service" component={Service} />
+//                 <Route exact path="/contact" component={Contact} />
+//             </Switch>
+//             <Footer />
+//         </Router>
+//     );
+// }
 
 export default App;
