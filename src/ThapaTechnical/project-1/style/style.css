@@ -1,0 +1,33 @@
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100vw;
+}
+body {
+  background-color: #ade9e0;
+}
+.heading h1 {
+  background-color: #ffe7c8;
+  padding: 20px;
+  border-radius: 30px;
+}
+#fst {
+  color: grey;
+}
+#m {
+  color: rgb(227, 230, 64);
+  font-weight: bolder;
+  font-size: 45px;
+}
+#a {
+  color: rgb(126, 11, 11);
+  font-weight: bolder;
+  font-size: 45px;
+}
+#e {
+  color: rgb(127, 22, 153);
+  font-weight: bolder;
+  font-size: 45px;
+}
