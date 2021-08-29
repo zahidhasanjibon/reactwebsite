@@ -464,7 +464,7 @@ import Contact from './ThapaTechnical/project-fullWebsite/pages/Contact';
 import Footer from './ThapaTechnical/project-fullWebsite/pages/Footer';
 import Home from './ThapaTechnical/project-fullWebsite/pages/Home';
 import Service from './ThapaTechnical/project-fullWebsite/pages/Service';
-import './ThapaTechnical/project-fullWebsite/style/index.css';
+import './ThapaTechnical/project-fullWebsite/style/index.scss';
 
 function App() {
     return (
