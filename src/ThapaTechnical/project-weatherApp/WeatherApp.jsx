@@ -9,10 +9,15 @@ const WeatherApp = () => {
     useEffect(() => {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${inp}&units=metric&appid=68cd5f7a0c384c33795e704df2df2f6f`;
         async function getData() {
-            const res = await Axios.get(url);
-            const datas = res.data.main;
-            setCity(datas);
-            console.log('jibon');
+            try {
+                const res = await Axios.get(url);
+                const datas = res.data.main;
+                setCity(datas);
+                console.log('jibon');
+            } catch (error) {
+                console.log('error occured');
+                setCity('');
+            }
         }
         getData();
     }, [inp]);
