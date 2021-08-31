@@ -482,10 +482,21 @@
 // }
 
 //* ****************************************** for thapa weather App Project **************************************************************
-import WeatherApp from './ThapaTechnical/project-weatherApp/WeatherApp';
+// import WeatherApp from './ThapaTechnical/project-weatherApp/WeatherApp';
+
+// function App() {
+//     return <WeatherApp />;
+// }
+
+//* ****************************************** for thapa Filter Image Project **************************************************************
+import FilterImage from './ThapaTechnical/project-filterImage/FilterImage';
 
 function App() {
-    return <WeatherApp />;
+    return (
+        <>
+            <FilterImage />
+        </>
+    );
 }
 
 export default App;
