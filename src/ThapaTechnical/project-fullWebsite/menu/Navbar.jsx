@@ -63,7 +63,7 @@ const Navbar = () => (
                                             className="nav-link"
                                             to="/contact"
                                         >
-                                            Contact
+                                            Contact Me
                                         </NavLink>
                                     </li>
                                 </ul>
