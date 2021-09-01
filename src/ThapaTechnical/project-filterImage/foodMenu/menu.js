@@ -79,5 +79,13 @@ const Menu = [
         price: '455 tk',
         description: ' Lorem ipsum dolor, sit amet cons klr adipi sicin',
     },
+    {
+        id: 11,
+        image: `${process.env.PUBLIC_URL}/images/lunch2.jpg`,
+        name: 'Burger',
+        category: 'evening',
+        price: '455 tk',
+        description: ' Lorem ipsum dolor, sit amet cons klr adipi sicin',
+    },
 ];
 export default Menu;
