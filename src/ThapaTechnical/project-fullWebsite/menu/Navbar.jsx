@@ -63,7 +63,7 @@ const Navbar = () => (
                                             className="nav-link"
                                             to="/contact"
                                         >
-                                            Contact to jibon
+                                            Contact
                                         </NavLink>
                                     </li>
                                 </ul>
