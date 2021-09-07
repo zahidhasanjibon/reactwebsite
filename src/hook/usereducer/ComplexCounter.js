@@ -5,6 +5,7 @@ export default function ComplexCounter() {
         counter1: 0,
         counter2: 0,
     };
+
     const reducer = (state, action) => {
         switch (action.type) {
             case 'increment1':

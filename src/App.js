@@ -126,7 +126,12 @@
 
 //                 <MainCounter>
 //                     {(count, incrementFunc) => (
-//                         <HoverCounter count={count} counterFunc={incrementFunc} />
+//                         <HoverCounter
+//                             count={count}
+//                             counterFunc={incrementFunc}
+//                             themeFunc={this.state.theme}
+//                             themeChangerFunc={this.state.switchTheme}
+//                         />
 //                     )}
 //                 </MainCounter>
 //                 <LibraryContext.Provider value={this.state}>
@@ -489,14 +494,30 @@
 // }
 
 //* ****************************************** for thapa Filter Image Project **************************************************************
-import FilterImage from './ThapaTechnical/project-filterImage/FilterImage';
+// import FilterImage from './ThapaTechnical/project-filterImage/FilterImage';
+
+// function App() {
+//     return (
+//         <>
+//             <FilterImage />
+//         </>
+//     );
+// }
+
+//* ****************************************** for thapa Filter Image Project **************************************************************
+// import Navbar from './ThapaTechnical/project-navbar/Navbar';
+
+// function App() {
+//     return (
+//         <>
+//             <Navbar />
+//         </>
+//     );
+// }
+//* ****************************************** for thapa Shopping Cart ***********************************************************
+import Main from './ThapaTechnical/project-shoppingCart/Main';
 
 function App() {
-    return (
-        <>
-            <FilterImage />
-        </>
-    );
+    return <Main />;
 }
-
 export default App;
