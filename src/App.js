@@ -515,9 +515,25 @@
 //     );
 // }
 //* ****************************************** for thapa Shopping Cart ***********************************************************
-import Main from './ThapaTechnical/project-shoppingCart/Main';
+// import Main from './ThapaTechnical/project-shoppingCart/Main';
+
+// function App() {
+//     return <Main />;
+// }
+
+//* ****************************************** for Sumit Quiz project ***********************************************************
+// import Login from './sumitQuizProject/pages/login/Login';
+import Home from './sumitQuizProject/pages/home/Home';
+import Navbar from './sumitQuizProject/pages/navbar/Navbar';
+// import Signup from './sumitQuizProject/pages/signup/Signup';
+import './sumitQuizProject/style/app.css';
 
 function App() {
-    return <Main />;
+    return (
+        <>
+            <Navbar />
+            <Home />
+        </>
+    );
 }
 export default App;
