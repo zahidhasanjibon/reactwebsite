@@ -17,7 +17,6 @@
     "jest": true
   },
   "rules": {
-    // "jsx-a11y/anchor-is-valid": 0,
     "jsx-a11y/mouse-events-have-key-events": 0,
     "jsx-a11y/label-has-associated-control": 0,
     "jsx-a11y/no-onchange": 0,
@@ -25,7 +24,7 @@
     "react/jsx-no-bind": 0,
     "class-methods-use-this": 0,
     "react/destructuring-assignment": 0,
-    // "react/destructuring-assignment": "never",
+
     "react/react-in-jsx-scope": 0,
     "react-hooks/rules-of-hooks": "error",
     "no-console": 0,
@@ -43,7 +42,7 @@
     "prettier/prettier": [
       "error",
       {
-        "trailingComma": "es5",
+        "trailingComma": "none",
         "singleQuote": true,
         "printWidth": 100,
         "tabWidth": 4,

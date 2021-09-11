@@ -1,66 +1,40 @@
-import imgPath from '../../images/quiz.png';
+import { NavLink } from 'react-router-dom';
+import img5 from '../../images/3.jpg';
+import img2 from '../../images/js.png';
+import img1 from '../../images/quiz.png';
+import img3 from '../../images/quiz2.png';
+import img4 from '../../images/quiz3.png';
+import Card from './Card';
 import cls from './Home.module.css';
 
 const Home = () => (
     <>
         <div className={cls.container}>
             <div className={cls.card_container}>
-                <div className={cls.card}>
-                    <div className={cls.card_info}>
-                        <div>
-                            <img className={cls.img} src={imgPath} alt="quizimg" />
-                        </div>
-                        <div className={cls.body}>
-                            <h5>#React Hooks Bangla - React useReducer hook Quiz</h5>
-                        </div>
-                        <div className={cls.footer}>
-                            <p>10 Quistions</p>
-                            <p>Score : Not taken yet</p>
-                        </div>
-                    </div>
-                </div>
-                <div className={cls.card}>
-                    <div className={cls.card_info}>
-                        <div>
-                            <img className={cls.img} src={imgPath} alt="quizimg" />
-                        </div>
-                        <div className={cls.body}>
-                            <h5>#React Hooks Bangla - React useReducer hook Quiz</h5>
-                        </div>
-                        <div className={cls.footer}>
-                            <p>10 Quistions</p>
-                            <p>Score : Not taken yet</p>
-                        </div>
-                    </div>
-                </div>
-                <div className={cls.card}>
-                    <div className={cls.card_info}>
-                        <div>
-                            <img className={cls.img} src={imgPath} alt="quizimg" />
-                        </div>
-                        <div className={cls.body}>
-                            <h5>#React Hooks Bangla - React useReducer hook Quiz</h5>
-                        </div>
-                        <div className={cls.footer}>
-                            <p>10 Quistions</p>
-                            <p>Score : Not taken yet</p>
-                        </div>
-                    </div>
-                </div>
-                <div className={cls.card}>
-                    <div className={cls.card_info}>
-                        <div>
-                            <img className={cls.img} src={imgPath} alt="quizimg" />
-                        </div>
-                        <div className={cls.body}>
-                            <h5>#React Hooks Bangla - React useReducer hook Quiz</h5>
-                        </div>
-                        <div className={cls.footer}>
-                            <p>10 Quistions</p>
-                            <p>Score : Not taken yet</p>
-                        </div>
-                    </div>
-                </div>
+                <NavLink to="/quiz">
+                    <Card src={img1} />
+                </NavLink>
+                <NavLink to="/quiz">
+                    <Card src={img5} />
+                </NavLink>
+                <NavLink to="/quiz">
+                    <Card src={img3} />
+                </NavLink>
+                <NavLink to="/quiz">
+                    <Card src={img4} />
+                </NavLink>
+                <NavLink to="/quiz">
+                    <Card src={img2} />
+                </NavLink>
+                <NavLink to="/quiz">
+                    <Card src={img5} />
+                </NavLink>
+                <NavLink to="/quiz">
+                    <Card src={img3} />
+                </NavLink>
+                <NavLink to="/quiz">
+                    <Card src={img2} />
+                </NavLink>
             </div>
         </div>
     </>

@@ -20,10 +20,15 @@
 }
 .logo h4 {
   font-weight: 700;
-  margin-left: 0.6rem;
+  margin: 0;
+  margin-left: 0.8rem;
+  font-size: 1.7rem;
+  color: rgb(130, 130, 184);
 }
 .user h5 {
   color: rgb(130, 130, 184);
-  margin-left: 0.5rem;
+  margin: 0;
+  margin-left: 0.8rem;
   font-weight: 600;
+  font-size: 1rem;
 }

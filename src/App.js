@@ -522,18 +522,30 @@
 // }
 
 //* ****************************************** for Sumit Quiz project ***********************************************************
-// import Login from './sumitQuizProject/pages/login/Login';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { AuthProvider } from './sumitQuizProject/contexts/AuthContext';
 import Home from './sumitQuizProject/pages/home/Home';
+import Login from './sumitQuizProject/pages/login/Login';
 import Navbar from './sumitQuizProject/pages/navbar/Navbar';
-// import Signup from './sumitQuizProject/pages/signup/Signup';
+import Quiz from './sumitQuizProject/pages/quiz/Quiz';
+import Result from './sumitQuizProject/pages/result/Result';
+import Signup from './sumitQuizProject/pages/signup/Signup';
 import './sumitQuizProject/style/app.css';
 
 function App() {
     return (
-        <>
-            <Navbar />
-            <Home />
-        </>
+        <Router>
+            <AuthProvider>
+                <Navbar />
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/signup" component={Signup} />
+                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/result" component={Result} />
+                    <Route exact path="/quiz" component={Quiz} />
+                </Switch>
+            </AuthProvider>
+        </Router>
     );
 }
 export default App;
