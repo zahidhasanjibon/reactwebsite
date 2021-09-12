@@ -1,14 +1,22 @@
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import { useState } from 'react';
+import { useHistory } from 'react-router';
 import imgPath from '../../images/login.svg';
 import cls from './Login.module.css';
+import { useAuth } from '../../contexts/AuthContext';
 
 const Login = () => {
     const [inpValue, setInpValue] = useState({
         email: '',
         password: ''
     });
+    const { email, password } = inpValue;
+    const [error, setError] = useState();
+    const [loading, setLoading] = useState();
+
+    const history = useHistory();
+    const { login } = useAuth();
 
     function handler(e) {
         const { name } = e.target;
@@ -17,6 +25,21 @@ const Login = () => {
             ...inpValue,
             [name]: val
         });
+    }
+
+    async function submitHandler(e) {
+        e.preventDefault();
+
+        try {
+            setError('');
+            setLoading(true);
+            await login(email, password);
+            history.push('/');
+        } catch (err) {
+            console.log('error occured');
+            setLoading(false);
+            setError(`username or password not correct`);
+        }
     }
 
     return (
@@ -30,7 +53,7 @@ const Login = () => {
                     </div>
 
                     <div className={cls.rightside}>
-                        <form>
+                        <form onSubmit={submitHandler}>
                             <div className={cls.seticon}>
                                 <input
                                     type="email"
@@ -59,8 +82,9 @@ const Login = () => {
                                 </span>
                                 <br /> <br />
                             </div>
+                            {error && <p className="error"> {error} </p>}
 
-                            <button className={cls.btn} type="button">
+                            <button disabled={loading} className={cls.btn} type="submit">
                                 SUBMIT NOW
                             </button>
                         </form>

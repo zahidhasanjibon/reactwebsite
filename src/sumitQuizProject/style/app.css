@@ -49,3 +49,6 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+#logout:hover {
+  cursor: pointer;
+}

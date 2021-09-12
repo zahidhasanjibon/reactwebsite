@@ -40,6 +40,7 @@ export function AuthProvider({ children }) {
         });
 
         const user = auth.currentUser;
+        console.log(user);
         setCurrentUser({
             ...user
         });

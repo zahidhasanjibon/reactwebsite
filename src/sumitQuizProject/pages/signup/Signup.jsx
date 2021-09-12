@@ -18,7 +18,6 @@ const Signup = () => {
     });
     const { userName, email, password, confPassword } = inpValue;
     const [error, setError] = useState();
-    // eslint-disable-next-line no-unused-vars
     const [loading, setLoading] = useState();
     const history = useHistory();
     const { signup } = useAuth();
@@ -138,7 +137,7 @@ const Signup = () => {
                                 <label>I agree to the Terms and Condition</label> <br /> <br />
                             </div>
                             {error && <p className="error"> {error} </p>}
-                            <button className={cls.btn} type="submit">
+                            <button disabled={loading} className={cls.btn} type="submit">
                                 SUBMIT NOW
                             </button>
                         </form>
