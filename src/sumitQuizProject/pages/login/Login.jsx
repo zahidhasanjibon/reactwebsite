@@ -2,9 +2,9 @@ import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import { useState } from 'react';
 import { useHistory } from 'react-router';
+import { useAuth } from '../../contexts/AuthContext';
 import imgPath from '../../images/login.svg';
 import cls from './Login.module.css';
-import { useAuth } from '../../contexts/AuthContext';
 
 const Login = () => {
     const [inpValue, setInpValue] = useState({

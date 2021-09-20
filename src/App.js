@@ -530,6 +530,8 @@ import Navbar from './sumitQuizProject/pages/navbar/Navbar';
 import Quiz from './sumitQuizProject/pages/quiz/Quiz';
 import Result from './sumitQuizProject/pages/result/Result';
 import Signup from './sumitQuizProject/pages/signup/Signup';
+import PrivateRoute from './sumitQuizProject/PrivateRoute';
+import PublicRoute from './sumitQuizProject/PublicRoute';
 import './sumitQuizProject/style/app.css';
 
 function App() {
@@ -539,10 +541,10 @@ function App() {
                 <Navbar />
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/signup" component={Signup} />
-                    <Route exact path="/login" component={Login} />
-                    <Route exact path="/result" component={Result} />
-                    <Route exact path="/quiz" component={Quiz} />
+                    <PublicRoute exact path="/signup" component={Signup} />
+                    <PublicRoute exact path="/login" component={Login} />
+                    <PrivateRoute exact path="/result" component={Result} />
+                    <PrivateRoute exact path="/quiz" component={Quiz} />
                 </Switch>
             </AuthProvider>
         </Router>

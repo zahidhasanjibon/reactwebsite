@@ -1,17 +1,21 @@
 import cls from './Home.module.css';
 
-const Card = ({ src }) => (
+const Card = ({ title, noq, id }) => (
     <div className={cls.card}>
         <div className={cls.card_info}>
             <div>
-                <img className={cls.img} src={src} alt="quizimg" />
+                <img
+                    className={cls.img}
+                    src={`http://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+                    alt={title}
+                />
             </div>
             <div className={cls.body}>
-                <h5>#React Hooks Bangla - React useReducer hook Quiz</h5>
+                <h5>{title}</h5>
             </div>
             <div className={cls.footer}>
-                <p>10 Quistions</p>
-                <p>Score : Not taken yet</p>
+                <p>{noq} Questions</p>
+                <p>Total points :{noq * 5} </p>
             </div>
         </div>
     </div>

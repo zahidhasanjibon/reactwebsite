@@ -1,42 +1,32 @@
 import { NavLink } from 'react-router-dom';
-import img5 from '../../images/3.jpg';
-import img2 from '../../images/js.png';
-import img1 from '../../images/quiz.png';
-import img3 from '../../images/quiz2.png';
-import img4 from '../../images/quiz3.png';
+import useVideosList from '../../hook/useVideosList';
+// import img5 from '../../images/3.jpg';
+// import img2 from '../../images/js.png';
+// import img1 from '../../images/quiz.png';
+// import img3 from '../../images/quiz2.png';
+// import img4 from '../../images/quiz3.png';
 import Card from './Card';
 import cls from './Home.module.css';
 
-const Home = () => (
-    <>
-        <div className={cls.container}>
-            <div className={cls.card_container}>
-                <NavLink to="/quiz">
-                    <Card src={img1} />
-                </NavLink>
-                <NavLink to="/quiz">
-                    <Card src={img5} />
-                </NavLink>
-                <NavLink to="/quiz">
-                    <Card src={img3} />
-                </NavLink>
-                <NavLink to="/quiz">
-                    <Card src={img4} />
-                </NavLink>
-                <NavLink to="/quiz">
-                    <Card src={img2} />
-                </NavLink>
-                <NavLink to="/quiz">
-                    <Card src={img5} />
-                </NavLink>
-                <NavLink to="/quiz">
-                    <Card src={img3} />
-                </NavLink>
-                <NavLink to="/quiz">
-                    <Card src={img2} />
-                </NavLink>
+const Home = () => {
+    const { videos, loading, error } = useVideosList();
+
+    return (
+        <>
+            <div className={cls.container}>
+                <div className={cls.card_container}>
+                    {videos.length > 0 &&
+                        videos.map((video) => (
+                            <NavLink to="/quiz" key={video.youtubeID}>
+                                <Card title={video.title} id={video.youtubeID} noq={video.noq} />
+                            </NavLink>
+                        ))}
+                    {!loading && videos.length === 0 && <div>! no data found</div>}
+                    {error && <div>there was an error! </div>}
+                    {loading && <div> Loading ...</div>}
+                </div>
             </div>
-        </div>
-    </>
-);
+        </>
+    );
+};
 export default Home;
