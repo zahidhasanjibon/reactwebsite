@@ -49,6 +49,6 @@
 }
 
 .wrong {
-  background: var(--dangerRed) !important;
+  background: rgb(255, 101, 101) !important;
   font-weight: 600;
 }

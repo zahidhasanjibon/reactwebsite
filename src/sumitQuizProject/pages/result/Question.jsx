@@ -1,14 +1,19 @@
 import classes from '../../style/Question.module.css';
 import Answers from '../quiz/Answers';
 
-export default function Question() {
+export default function Question({ answers = [] }) {
     return (
-        <div className={classes.question}>
-            <div className={classes.qtitle}>
-                <span className="material-icons-outlined"> help_outline </span>
-                Here goes the question from Learn with Sumit?
-            </div>
-            <Answers />
-        </div>
+        <>
+            {answers.map((answer, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <div className={classes.question} key={index}>
+                    <div className={classes.qtitle}>
+                        <span className="material-icons-outlined"> help_outline </span>
+                        {answer.title}
+                    </div>
+                    <Answers input={false} options={answer.options} />
+                </div>
+            ))}
+        </>
     );
 }

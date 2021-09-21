@@ -1,7 +1,7 @@
 import cls from '../../style/ProgressBar.module.css';
 import Button from './Button';
 
-export default function ProgressBar({ nextFunc, prevFunc, progress, submit }) {
+export default function ProgressBar({ nextFunc, prevFunc, progress, submitFunc }) {
     return (
         <div className={cls.progressBar}>
             <button type="button" className={cls.backButton} onClick={prevFunc}>
@@ -16,7 +16,7 @@ export default function ProgressBar({ nextFunc, prevFunc, progress, submit }) {
                 </div>
             </div>
 
-            <Button className={cls.next} onClick={progress === 100 ? submit : nextFunc}>
+            <Button className={cls.next} onClick={progress === 100 ? submitFunc : nextFunc}>
                 <span>{progress === 100 ? 'submit' : 'Next Question'}</span>
                 <span>
                     <i className="material-icons">arrow_forward</i>

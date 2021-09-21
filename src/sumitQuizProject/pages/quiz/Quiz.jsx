@@ -1,6 +1,8 @@
+import { getDatabase, ref, set } from 'firebase/database';
 import _ from 'lodash';
 import { useEffect, useReducer, useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
+import { useAuth } from '../../contexts/AuthContext';
 import useQuestions from '../../hook/useQuestions';
 import cls from '../../style/Quiz.module.css';
 import Answers from './Answers';
@@ -36,6 +38,8 @@ const Quiz = () => {
     const { questions, loading, error } = useQuestions(id);
 
     const [qna, dispatch] = useReducer(reducer, initialState);
+    const { currentUser } = useAuth();
+    const history = useHistory();
 
     useEffect(() => {
         dispatch({
@@ -67,6 +71,20 @@ const Quiz = () => {
         }
     }
 
+    // submit handler function
+    async function submit() {
+        const { uid } = currentUser;
+        const db = getDatabase();
+        const resultRef = ref(db, `result/${uid}`);
+        await set(resultRef, {
+            [id]: qna
+        });
+        history.push({
+            pathname: `/result/${id}`,
+            state: { qna }
+        });
+    }
+
     // calculate percentage
     const percentage = questions.length > 0 ? ((currQues + 1) / questions.length) * 100 : 0;
 
@@ -80,12 +98,14 @@ const Quiz = () => {
                         <p>{qna[currQues].title}</p>
                         <h4>Question can have multiple answer</h4>
                         <Answers
+                            input
                             options={qna[currQues].options}
                             handleChange={handleAnswerChange}
                         />
                         <ProgressBar
                             nextFunc={nextQuestion}
                             prevFunc={previousQuestion}
+                            submitFunc={submit}
                             progress={percentage}
                         />
                         <MiniPlayer />
