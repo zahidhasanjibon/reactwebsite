@@ -3,7 +3,7 @@ import React, { useReducer } from 'react';
 export default function ComplexCounter() {
     const initialVal = {
         counter1: 0,
-        counter2: 0,
+        counter2: 0
     };
 
     const reducer = (state, action) => {

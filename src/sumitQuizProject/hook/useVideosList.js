@@ -1,27 +1,27 @@
-import { get, getDatabase, orderByKey, query, ref } from 'firebase/database';
+import { get, getDatabase, limitToFirst, orderByKey, query, ref, startAt } from 'firebase/database';
 import { useEffect, useState } from 'react';
 
-export default function useVideosList() {
+export default function useVideosList(page) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [videos, setVideos] = useState([]);
+    const [hasMore, setHasMore] = useState(true);
     useEffect(() => {
         async function fetchVideos() {
             const db = getDatabase();
             const videosRef = ref(db, 'videos');
-            const videoQuery = query(videosRef, orderByKey());
+            const videoQuery = query(videosRef, orderByKey(), startAt(`${page}`), limitToFirst(8));
 
             try {
                 setLoading(true);
                 setError(false);
-
-                // request firebase database
                 const snapshot = await get(videoQuery);
+                console.log(snapshot.val());
                 setLoading(false);
                 if (snapshot.exists()) {
                     setVideos((prevVideos) => [...prevVideos, ...Object.values(snapshot.val())]);
                 } else {
-                    console.log('jani na');
+                    setHasMore(false);
                 }
             } catch (err) {
                 console.log(err);
@@ -29,12 +29,15 @@ export default function useVideosList() {
                 setError(false);
             }
         }
-        fetchVideos();
-    }, []);
+        setTimeout(() => {
+            fetchVideos();
+        }, 1000);
+    }, [page]);
 
     return {
         loading,
         error,
-        videos
+        videos,
+        hasMore
     };
 }

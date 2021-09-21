@@ -1,30 +1,27 @@
-import { NavLink } from 'react-router-dom';
 import cls from '../../style/ProgressBar.module.css';
 import Button from './Button';
 
-export default function ProgressBar() {
+export default function ProgressBar({ nextFunc, prevFunc, progress, submit }) {
     return (
         <div className={cls.progressBar}>
-            <div className={cls.backButton}>
+            <button type="button" className={cls.backButton} onClick={prevFunc}>
                 <span>
                     <i className="material-icons">arrow_back</i>
                 </span>
-            </div>
+            </button>
             <div className={cls.rangeArea}>
-                <div className={cls.tooltip}>24% Cimplete!</div>
+                <div className={cls.tooltip}>{progress}% Cimplete!</div>
                 <div className={cls.rangeBody}>
-                    <div className={cls.progress} style={{ width: '20%' }} />
+                    <div className={cls.progress} style={{ width: `${progress}%` }} />
                 </div>
             </div>
 
-            <NavLink to="/result">
-                <Button className={cls.next}>
-                    <span>Next Question</span>
-                    <span>
-                        <i className="material-icons">arrow_forward</i>
-                    </span>
-                </Button>
-            </NavLink>
+            <Button className={cls.next} onClick={progress === 100 ? submit : nextFunc}>
+                <span>{progress === 100 ? 'submit' : 'Next Question'}</span>
+                <span>
+                    <i className="material-icons">arrow_forward</i>
+                </span>
+            </Button>
         </div>
     );
 }

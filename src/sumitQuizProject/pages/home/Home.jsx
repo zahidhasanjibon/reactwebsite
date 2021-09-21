@@ -1,26 +1,45 @@
+import { useState } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import { NavLink } from 'react-router-dom';
 import useVideosList from '../../hook/useVideosList';
-// import img5 from '../../images/3.jpg';
-// import img2 from '../../images/js.png';
-// import img1 from '../../images/quiz.png';
-// import img3 from '../../images/quiz2.png';
-// import img4 from '../../images/quiz3.png';
 import Card from './Card';
 import cls from './Home.module.css';
 
 const Home = () => {
-    const { videos, loading, error } = useVideosList();
+    const [page, setPage] = useState(1);
+    const { videos, loading, error, hasMore } = useVideosList(page);
 
     return (
         <>
             <div className={cls.container}>
                 <div className={cls.card_container}>
-                    {videos.length > 0 &&
-                        videos.map((video) => (
-                            <NavLink to="/quiz" key={video.youtubeID}>
-                                <Card title={video.title} id={video.youtubeID} noq={video.noq} />
-                            </NavLink>
-                        ))}
+                    {videos.length > 0 && (
+                        <InfiniteScroll
+                            dataLength={videos.length}
+                            hasMore={hasMore}
+                            loader="Loading ..."
+                            next={() => setPage(page + 8)}
+                        >
+                            {videos.map((video) =>
+                                video.noq > 0 ? (
+                                    <NavLink to={`/quiz/${video.youtubeID}`} key={video.youtubeID}>
+                                        <Card
+                                            title={video.title}
+                                            id={video.youtubeID}
+                                            noq={video.noq}
+                                        />
+                                    </NavLink>
+                                ) : (
+                                    <Card
+                                        key={video.youtubeID}
+                                        title={video.title}
+                                        id={video.youtubeID}
+                                        noq={video.noq}
+                                    />
+                                )
+                            )}
+                        </InfiniteScroll>
+                    )}
                     {!loading && videos.length === 0 && <div>! no data found</div>}
                     {error && <div>there was an error! </div>}
                     {loading && <div> Loading ...</div>}
