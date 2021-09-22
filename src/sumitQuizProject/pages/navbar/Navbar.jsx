@@ -14,7 +14,7 @@ const Navbar = () => {
                     <NavLink to="/">
                         <img className={cls.img} src={imgsrc} alt="logo" />
                     </NavLink>
-                    <h4>Learn With Sumit</h4>
+                    <h4>Learn from Quiz</h4>
                 </div>
 
                 {currentUser ? (
