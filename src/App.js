@@ -515,39 +515,39 @@
 //     );
 // }
 //* ****************************************** for thapa Shopping Cart ***********************************************************
-// import Main from './ThapaTechnical/project-shoppingCart/Main';
-
-// function App() {
-//     return <Main />;
-// }
-
-//* ****************************************** for Sumit Quiz project ***********************************************************
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { AuthProvider } from './sumitQuizProject/contexts/AuthContext';
-import Home from './sumitQuizProject/pages/home/Home';
-import Login from './sumitQuizProject/pages/login/Login';
-import Navbar from './sumitQuizProject/pages/navbar/Navbar';
-import Quiz from './sumitQuizProject/pages/quiz/Quiz';
-import Result from './sumitQuizProject/pages/result/Result';
-import Signup from './sumitQuizProject/pages/signup/Signup';
-import PrivateRoute from './sumitQuizProject/PrivateRoute';
-import PublicRoute from './sumitQuizProject/PublicRoute';
-import './sumitQuizProject/style/app.css';
+import Main from './thapa/Main';
 
 function App() {
-    return (
-        <Router>
-            <AuthProvider>
-                <Navbar />
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <PublicRoute exact path="/signup" component={Signup} />
-                    <PublicRoute exact path="/login" component={Login} />
-                    <PrivateRoute exact path="/result/:id" component={Result} />
-                    <PrivateRoute exact path="/quiz/:id" component={Quiz} />
-                </Switch>
-            </AuthProvider>
-        </Router>
-    );
+    return <Main />;
 }
+
+//* ****************************************** for Sumit Quiz project ***********************************************************
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { AuthProvider } from './sumitQuizProject/contexts/AuthContext';
+// import Home from './sumitQuizProject/pages/home/Home';
+// import Login from './sumitQuizProject/pages/login/Login';
+// import Navbar from './sumitQuizProject/pages/navbar/Navbar';
+// import Quiz from './sumitQuizProject/pages/quiz/Quiz';
+// import Result from './sumitQuizProject/pages/result/Result';
+// import Signup from './sumitQuizProject/pages/signup/Signup';
+// import PrivateRoute from './sumitQuizProject/PrivateRoute';
+// import PublicRoute from './sumitQuizProject/PublicRoute';
+// import './sumitQuizProject/style/app.css';
+
+// function App() {
+//     return (
+//         <Router>
+//             <AuthProvider>
+//                 <Navbar />
+//                 <Switch>
+//                     <Route exact path="/" component={Home} />
+//                     <PublicRoute exact path="/signup" component={Signup} />
+//                     <PublicRoute exact path="/login" component={Login} />
+//                     <PrivateRoute exact path="/result/:id" component={Result} />
+//                     <PrivateRoute exact path="/quiz/:id" component={Quiz} />
+//                 </Switch>
+//             </AuthProvider>
+//         </Router>
+//     );
+// }
 export default App;
