@@ -1,34 +1,22 @@
 {
   "files": {
-    "main.css": "/reactwebsite/static/css/main.c06516d4.chunk.css",
-    "main.js": "/reactwebsite/static/js/main.e29e855e.chunk.js",
-    "main.js.map": "/reactwebsite/static/js/main.e29e855e.chunk.js.map",
-    "runtime-main.js": "/reactwebsite/static/js/runtime-main.d8fb1568.js",
-    "runtime-main.js.map": "/reactwebsite/static/js/runtime-main.d8fb1568.js.map",
-    "static/css/2.c490997a.chunk.css": "/reactwebsite/static/css/2.c490997a.chunk.css",
-    "static/js/2.112573c5.chunk.js": "/reactwebsite/static/js/2.112573c5.chunk.js",
-    "static/js/2.112573c5.chunk.js.map": "/reactwebsite/static/js/2.112573c5.chunk.js.map",
-    "static/js/3.815d5a0c.chunk.js": "/reactwebsite/static/js/3.815d5a0c.chunk.js",
-    "static/js/3.815d5a0c.chunk.js.map": "/reactwebsite/static/js/3.815d5a0c.chunk.js.map",
+    "main.css": "/reactwebsite/static/css/main.38b835fe.chunk.css",
+    "main.js": "/reactwebsite/static/js/main.7c4b02a2.chunk.js",
+    "main.js.map": "/reactwebsite/static/js/main.7c4b02a2.chunk.js.map",
+    "runtime-main.js": "/reactwebsite/static/js/runtime-main.a62e8d1e.js",
+    "runtime-main.js.map": "/reactwebsite/static/js/runtime-main.a62e8d1e.js.map",
+    "static/js/2.70dd2f80.chunk.js": "/reactwebsite/static/js/2.70dd2f80.chunk.js",
+    "static/js/2.70dd2f80.chunk.js.map": "/reactwebsite/static/js/2.70dd2f80.chunk.js.map",
+    "static/js/3.0ce63b8b.chunk.js": "/reactwebsite/static/js/3.0ce63b8b.chunk.js",
+    "static/js/3.0ce63b8b.chunk.js.map": "/reactwebsite/static/js/3.0ce63b8b.chunk.js.map",
     "index.html": "/reactwebsite/index.html",
-    "static/css/2.c490997a.chunk.css.map": "/reactwebsite/static/css/2.c490997a.chunk.css.map",
-    "static/css/main.c06516d4.chunk.css.map": "/reactwebsite/static/css/main.c06516d4.chunk.css.map",
-    "static/js/2.112573c5.chunk.js.LICENSE.txt": "/reactwebsite/static/js/2.112573c5.chunk.js.LICENSE.txt",
-    "static/media/2nd.9dc262ad.svg": "/reactwebsite/static/media/2nd.9dc262ad.svg",
-    "static/media/Sandroid.85f7de04.png": "/reactwebsite/static/media/Sandroid.85f7de04.png",
-    "static/media/Sdesign.df36b770.png": "/reactwebsite/static/media/Sdesign.df36b770.png",
-    "static/media/Smarketing.a2f9a4a1.png": "/reactwebsite/static/media/Smarketing.a2f9a4a1.png",
-    "static/media/Ssocial.ecb9dab1.png": "/reactwebsite/static/media/Ssocial.ecb9dab1.png",
-    "static/media/Ssoftware.e6767876.png": "/reactwebsite/static/media/Ssoftware.e6767876.png",
-    "static/media/Sweb.f3baaf25.png": "/reactwebsite/static/media/Sweb.f3baaf25.png",
-    "static/media/logo.04b6788a.svg": "/reactwebsite/static/media/logo.04b6788a.svg",
-    "static/media/service.96073942.svg": "/reactwebsite/static/media/service.96073942.svg"
+    "static/css/main.38b835fe.chunk.css.map": "/reactwebsite/static/css/main.38b835fe.chunk.css.map",
+    "static/js/2.70dd2f80.chunk.js.LICENSE.txt": "/reactwebsite/static/js/2.70dd2f80.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d8fb1568.js",
-    "static/css/2.c490997a.chunk.css",
-    "static/js/2.112573c5.chunk.js",
-    "static/css/main.c06516d4.chunk.css",
-    "static/js/main.e29e855e.chunk.js"
+    "static/js/runtime-main.a62e8d1e.js",
+    "static/js/2.70dd2f80.chunk.js",
+    "static/css/main.38b835fe.chunk.css",
+    "static/js/main.7c4b02a2.chunk.js"
   ]
 }
