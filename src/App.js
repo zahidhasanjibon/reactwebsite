@@ -415,12 +415,12 @@
 
 //* ****************************************** for Movie Project ***********************************************************************
 
-import Main from './moviesWebsiteProject/components/Main';
-import './moviesWebsiteProject/style/app.css';
+// import Main from './moviesWebsiteProject/components/Main';
+// import './moviesWebsiteProject/style/app.css';
 
-function App() {
-    return <Main />;
-}
+// function App() {
+//     return <Main />;
+// }
 
 //* ****************************************** for Sumit Quiz project ***********************************************************
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -453,14 +453,14 @@ function App() {
 // }
 
 //* ****************************************** for thapa Filter Image Project **************************************************************
-// import FilterImage from './ThapaTechnical/project-filterImage/FilterImage';
+import FilterImage from './FilterImage';
 
-// function App() {
-//     return (
-//         <>
-//             <FilterImage />
-//         </>
-//     );
-// }
+function App() {
+    return (
+        <>
+            <FilterImage />
+        </>
+    );
+}
 
 export default App;

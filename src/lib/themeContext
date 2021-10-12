@@ -1,5 +1,0 @@
-import themeContext from './Context';
-
-const LibraryContext = themeContext();
-
-export default LibraryContext;
